@@ -23,3 +23,9 @@ git show-ref --verify --quiet refs/heads/<branch>
 ```
 git rev-parse --abbrev-ref HEAD
 ```
+
+### Remove every branches merged into master
+
+```
+git branch --merged master | grep -v master | xargs git branch -d
+```
