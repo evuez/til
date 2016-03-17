@@ -29,3 +29,9 @@ git rev-parse --abbrev-ref HEAD
 ```
 git branch --merged master | grep -v master | xargs git branch -d
 ```
+
+### Checkout on a separate working tree
+
+```
+git --work-tree=</working/directory/> --git-dir=</git/directory/> checkout --force --quiet <ref-name>
+```
